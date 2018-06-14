@@ -19,7 +19,7 @@ Notes on [CSS Grid Fundamentals](https://cssgrid.io/) by Wes Bos
   - [Lesson 08](#lesson-08)
   - [Lesson 09](#lesson-09)
   - [Lesson 10](#lesson-10)
-  - [Lesson 11](#lesson-11)
+  - [Lesson 11: Exercise](#lesson-11-exercise)
   - [Lesson 12](#lesson-12)
   - [Lesson 13](#lesson-13)
   - [Lesson 14](#lesson-14)
@@ -27,7 +27,13 @@ Notes on [CSS Grid Fundamentals](https://cssgrid.io/) by Wes Bos
   - [Lesson 16](#lesson-16)
   - [Lesson 17](#lesson-17)
   - [Lesson 18](#lesson-18)
-  - [Lesson 19](#lesson-19)
+  - [Lesson 19: Exercise](#lesson-19-exercise)
+  - [Lesson 20: Exercise](#lesson-20-exercise)
+  - [Lesson 21: Flexbox vs CSS Grid](#lesson-21-flexbox-vs-css-grid)
+  - [Lesson 22: Exercise](#lesson-22-exercise)
+  - [Lesson 23: Exercise](#lesson-23-exercise)
+  - [Lesson 24: Exercise](#lesson-24-exercise)
+  - [Lesson 25: Exercise](#lesson-25-exercise)
 
 <!-- /TOC -->
 
@@ -52,7 +58,8 @@ Notes on [CSS Grid Fundamentals](https://cssgrid.io/) by Wes Bos
 - [X] ~~*Lesson 17*~~ [2018-06-14]
 - [X] ~~*Lesson 18*~~ [2018-06-14]
 - [X] ~~*Lesson 19*~~ [2018-06-14]
-- [ ] Lesson 20
+- [X] ~~*Lesson 20*~~ [2018-06-14]
+- [ ] Lesson 21
 - [ ] Lesson 22
 - [ ] Lesson 22
 - [ ] Lesson 23
@@ -114,9 +121,10 @@ Property on Grid Items:
 
 - `grid-column: 1 / -1` 100% width of container
 
-## Lesson 11
+## Lesson 11: Exercise
 
-- Spacing & Placing Cardio Exercise. Good practice. Easy
+- [Spacing & Placing Cardio Exercise](https://jsfiddle.net/cesarnml/prbex23c/)
+- Good practice. Easy
 
 ## Lesson 12
 
@@ -141,7 +149,7 @@ grid-template-areas:
 
 ## Lesson 15
 
-- name grid lines:
+- Naming grid lines:
 
 ```css
 grid-template-columns: [name1 name2] 1fr [name3]
@@ -167,6 +175,81 @@ grid-template-columns: [name1 name2] 1fr [name3]
 
 - `order: [0]`: default is 0
 
-## Lesson 19
+## Lesson 19: Exercise
 
--
+[Album Cover Layout Exercise](https://jsfiddle.net/cesarnml/res69thd/)
+
+```css
+    .albums {
+      display: grid;
+      grid-gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .album {
+      display: grid;
+      background: rgba(244, 244, 244, .3);
+      box-shadow: 0 0 5px rgba(0, 0, 0 .2);
+      grid-gap: 10px;
+      grid-template-columns: 150px 1fr;
+      align-items: center;
+      padding: 20px;
+      color: white;
+      font-weight: 100;
+    }
+
+    .album__artwork {
+      width: 100%
+    }
+```
+
+## Lesson 20: Exercise
+
+- [CSS Grid Image Gallery](https://jsfiddle.net/cesarnml/tgbdrz2k/)
+
+- `Array.from({length: 50}, [cb, cb])` create an array from object with length property = number of arrays created; call back can used to define each array entry
+
+```javascript
+// Wes Bos JS-fu
+    function generateHTML ([h, v]) {
+      return `
+      <div class="item h${h} v${v}">
+        <img src="./images/${randomNumber(12)}.jpg">
+        <div class="item__overlay">
+          <button>View ➡</button>
+        </div>
+      </div>
+      `
+    }
+
+    function randomNumber (limit) {
+      return Math.floor(Math.random() * limit) + 1
+    }
+
+    const digits = Array.from({
+      length: 50
+    }, () => {
+      return [randomNumber(4), randomNumber(4)]
+    })
+
+    const html = digits.map(generateHTML).join('')
+    gallery.innerHTML = html
+```
+
+## Lesson 21: Flexbox vs CSS Grid
+
+## Lesson 22: Exercise
+
+- [Recreating Codepend Exercise](https://jsfiddle.net/cesarnml/p2t90v6m/)
+
+## Lesson 23: Exercise
+
+- [Bootstrappy Grid and CSS Variables Exercise](https://jsfiddle.net/cesarnml/p4tru59f/)
+
+## Lesson 24: Exercise
+
+- [Responsive Website Layout](https://jsfiddle.net/cesarnml/kg8smzp1/)
+
+## Lesson 25: Exercise
+
+- [Full Bleed Blog Layout](https://jsfiddle.net/cesarnml/85pxa1jv/)
