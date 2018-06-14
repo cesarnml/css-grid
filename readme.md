@@ -26,6 +26,8 @@ Notes on [CSS Grid Fundamentals](https://cssgrid.io/) by Wes Bos
   - [Lesson 15](#lesson-15)
   - [Lesson 16](#lesson-16)
   - [Lesson 17](#lesson-17)
+  - [Lesson 18](#lesson-18)
+  - [Lesson 19](#lesson-19)
 
 <!-- /TOC -->
 
@@ -45,11 +47,11 @@ Notes on [CSS Grid Fundamentals](https://cssgrid.io/) by Wes Bos
 - [X] ~~*Lesson 12*~~ [2018-06-14]
 - [X] ~~*Lesson 13*~~ [2018-06-14]
 - [X] ~~*Lesson 14*~~ [2018-06-14]
-- [ ] Lesson 15
-- [ ] Lesson 16
-- [ ] Lesson 17
-- [ ] Lesson 18
-- [ ] Lesson 19
+- [X] ~~*Lesson 15*~~ [2018-06-14]
+- [X] ~~*Lesson 16*~~ [2018-06-14]
+- [X] ~~*Lesson 17*~~ [2018-06-14]
+- [X] ~~*Lesson 18*~~ [2018-06-14]
+- [X] ~~*Lesson 19*~~ [2018-06-14]
 - [ ] Lesson 20
 - [ ] Lesson 22
 - [ ] Lesson 22
@@ -123,7 +125,8 @@ Property on Grid Items:
 
 ## Lesson 13
 
-- `fit-content(max-size)`: consider as edge case solution
+- `minmax(min-size, max-size)`: smart sizing of grid-items
+- `fit-content(max-size)`: edge-case solution
 
 ## Lesson 14
 
@@ -157,5 +160,13 @@ grid-template-columns: [name1 name2] 1fr [name3]
 - `justify-content`: aligns grid within container (left-right)
 - `align-content`: [start], end, center, stretch, space-around, space-between, space-evenly
 - `place-content`: shorthand for above two
-- `align-self`
-- `justify-self`
+- `justify-self`: item specific changes, row
+- `align-self`: item specific changes, column
+
+## Lesson 18
+
+- `order: [0]`: default is 0
+
+## Lesson 19
+
+-
